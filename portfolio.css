@@ -8,16 +8,17 @@
 }
 
 body {
-	background-color: gray;
+	background-color: #e7e3d4;
 	font-family: 'Montserrat', sans-serif;
-	height: 100vh;
+	/*height: 100vh;*/
+	color: #3B8BE8;
 }
 
 header {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	background-color: white;
+	background-color: #e7e3d4;
 	padding-left: 1%;
 	position: sticky;
 	position: -webkit-sticky;
@@ -27,6 +28,10 @@ header {
 }
 
 .my-name {
+	margin-right: auto;
+}
+
+.job-title {
 	margin-right: auto;
 }
 
@@ -41,21 +46,74 @@ li{
 a {
 	text-decoration: none;
 	text-transform: uppercase;
+	color: #3B8BE8;
 }
 
 a:hover {
-	color: green;
+	color: #8590aa;
 }
+
+.tooltip {
+	position: relative;
+}
+
+.tooltip::before{
+	position: absolute;
+	z-index: 2;
+	display: none;
+	width: 90px;
+	padding: 10px;
+	font-size: 0.6em;
+	line-height: 1.4em;
+	border-radius: 5px;
+	background-color: #b23850;
+	color: #e7e3d4;
+	content: "Download PDF";
+	top: 30px;
+	right: 10px;
+}
+
+.tooltip:hover::before {
+	display: inline-block;
+}
+
+#tooltip {
+	position: relative;
+}
+
+#tooltip::before{
+	position: absolute;
+	z-index: 2;
+	display: none;
+	width: 90px;
+	padding: 10px;
+	font-size: 0.6em;
+	line-height: 1.4em;
+	border-radius: 5px;
+	background-color: #b23850;
+	color: #e7e3d4;
+	content: "Zoom on Large Screens";
+	top: 30px;
+	right: 10px;
+}
+
+#tooltip:hover::before {
+	display: inline-block;
+}
+
+
 
 .portfolio {
 	display: grid;
-	grid-template-columns: 50px 1fr 1fr 1fr 1fr 50px;
+	grid-template-columns: 10px 1fr 1fr 1fr 10px;
 	grid-template-areas: 
-	". one two eight four ."
-	". five six seven three .";
+	". title title title ."
+	". one two three ."
+	". four five six  .";
 	grid-gap: 10px;
-	border: 2px solid red;
-	background-color: lightblue;
+	background-color: #c4dbf6;
+	margin-bottom: 30px;
+	padding-bottom: 2rem;
 }
 
 #portfolio-title {
@@ -63,9 +121,15 @@ a:hover {
 	width: 100%;
 	text-align: center;
 	font-size: 5rem;
-	padding-bottom: 100px;
+	padding-bottom: 10%;
+	grid-area: title;
 
 }
+
+.title {
+	font-size: 2rem;
+}
+
 .live {
 	display: block;
 	margin: auto;
@@ -82,72 +146,331 @@ a:hover {
 	border-radius: 25px;
 }
 
-.created-with {
-	color: red;
-}
 
 #one {
 	grid-area: one;
 	text-align: center;
-	border: 2px solid black;
+	background-color: #e7e3d4;
+	border-radius: 10px;
 }
 
 .scarowinds {
 	height: 20vh;
 	width: 20vw;
+	border-radius: 5px;
 }
 
 #two {
 	grid-area: two;
 	text-align: center;
-	border: 2px solid black;
+	background-color: #e7e3d4;
+	border-radius: 10px;
 }
 
 .restaurant {
 	height: 20vh;
 	width: 20vw;
+	border-radius: 5px;
 }
 
 #three {
 	grid-area: three;
 	text-align: center;
-	border: 2px solid black;
+	background-color: #e7e3d4;
+	border-radius: 10px;
 }
 
 .landscaper {
 	height: 20vh;
 	width: 20vw;
+	border-radius: 5px;
 }
 
 #four {
 	grid-area: four;
 	text-align: center;
-	border: 2px solid black;
+	background-color: #e7e3d4;
+	border-radius: 10px;
 }
 
 .insurance {
 	height: 20vh;
 	width: 20vw;
+	border-radius: 5px;
 }
 
 #five {
 	grid-area: five;
 	text-align: center;
-	border: 2px solid black;
+	background-color: #e7e3d4;
+	border-radius: 10px;
 }
 
 .animations {
 	height: 20vh;
 	width: 20vw;
+	border-radius: 5px;
 }
 
 #six {
 	grid-area: six;
 	text-align: center;
-	border: 2px solid black;
+	background-color: #e7e3d4;
+	border-radius: 10px;
 }
 
 .zoom {
 	height: 20vh;
 	width: 20vw;
+	border-radius: 5px;
+}
+
+@media only screen and (max-width: 575.98px){
+.portfolio {
+	display: grid;
+	grid-template-columns: 10px 1fr 10px;
+	grid-template-areas: 
+	". title ."
+	". one ."
+	". two ."
+	". three ."
+	". four ."
+	". five ."
+	". six  .";
+	grid-gap: 10px;
+	background-color: #c4dbf6;
+	margin-bottom: 30px;
+	padding-bottom: 2rem;
+}
+
+#portfolio-title {
+	height: 5%;
+	width: 100%;
+	text-align: center;
+	font-size: 5rem;
+	padding-bottom: 100px;
+}
+.live {
+	display: block;
+	margin: auto;
+	background-color: white;
+	width: 40%;
+	border-radius: 25px;
+}
+
+.code {
+	display: block;
+	margin: auto;
+	background-color: white;
+	width: 40%;
+	border-radius: 25px;
+}
+
+
+#one {
+	grid-area: one;
+	text-align: center;
+	background-color: #e7e3d4;
+	border-radius: 5px;
+}
+
+.scarowinds {
+	height: 20vh;
+	width: 40vw;
+	border-radius: 10px;
+}
+
+#two {
+	grid-area: two;
+	text-align: center;
+	background-color: #e7e3d4;
+	border-radius: 5px;
+}
+
+.restaurant {
+	height: 20vh;
+	width: 40vw;
+	border-radius: 10px;
+}
+
+#three {
+	grid-area: three;
+	text-align: center;
+	background-color: #e7e3d4;
+	border-radius: 5px;
+}
+
+.landscaper {
+	height: 20vh;
+	width: 40vw;
+	border-radius: 10px;
+}
+
+#four {
+	grid-area: four;
+	text-align: center;
+	background-color: #e7e3d4;
+	border-radius: 5px;
+}
+
+.insurance {
+	height: 20vh;
+	width: 40vw;
+	border-radius: 10px;
+}
+
+#five {
+	grid-area: five;
+	text-align: center;
+	background-color: #e7e3d4;
+	border-radius: 5px;
+}
+
+.animations {
+	height: 20vh;
+	width: 40vw;
+	border-radius: 10px;
+}
+
+#six {
+	grid-area: six;
+	text-align: center;
+	background-color: #e7e3d4;
+	border-radius: 5px;
+}
+
+.zoom {
+	height: 20vh;
+	width: 40vw;
+	border-radius: 10px;
+}
+
+.title {
+	font-size: 2rem;
+}
+
+}
+
+@media only screen and (min-width: 576px) and (max-width: 991.98px) {
+.portfolio {
+	display: grid;
+	grid-template-columns: 10px 1fr 1fr 10px;
+	grid-template-areas: 
+	". title title ."
+	". one two ."
+	". three four ."
+	". five six .";
+	grid-gap: 10px;
+	background-color: #c4dbf6;
+	margin-bottom: 30px;
+	padding-bottom: 2rem;
+}
+
+
+#portfolio-title {
+	height: 5%;
+	width: 100%;
+	text-align: center;
+	font-size: 5rem;
+	padding-bottom: 100px;
+
+}
+.live {
+	display: block;
+	margin: auto;
+	background-color: white;
+	width: 40%;
+	border-radius: 25px;
+}
+
+.code {
+	display: block;
+	margin: auto;
+	background-color: white;
+	width: 40%;
+	border-radius: 25px;
+}
+
+#one {
+	grid-area: one;
+	text-align: center;
+	background-color: #e7e3d4;
+	border-radius: 5px;
+}
+
+.scarowinds {
+	height: 20vh;
+	width: 30vw;
+	border-radius: 10px;
+}
+
+#two {
+	grid-area: two;
+	text-align: center;
+	background-color: #e7e3d4;
+	border-radius: 5px;
+}
+
+.restaurant {
+	height: 20vh;
+	width: 30vw;
+	border-radius: 10px;
+}
+
+#three {
+	grid-area: three;
+	text-align: center;
+	background-color: #e7e3d4;
+	border-radius: 5px;
+}
+
+.landscaper {
+	height: 20vh;
+	width: 30vw;
+	border-radius: 10px;
+}
+
+#four {
+	grid-area: four;
+	text-align: center;
+	background-color: #e7e3d4;
+	border-radius: 5px;
+}
+
+.insurance {
+	height: 20vh;
+	width: 30vw;
+	border-radius: 10px;
+}
+
+#five {
+	grid-area: five;
+	text-align: center;
+	background-color: #e7e3d4;
+	border-radius: 5px;
+}
+
+.animations {
+	height: 20vh;
+	width: 30vw;
+	border-radius: 10px;
+}
+
+#six {
+	grid-area: six;
+	text-align: center;
+	background-color: #e7e3d4;
+	border-radius: 5px;
+}
+
+.zoom {
+	height: 20vh;
+	width: 30vw;
+	border-radius: 10px;
+}
+
+.title {
+	font-size: 2rem;
+}
+
 }
