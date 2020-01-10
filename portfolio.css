@@ -10,7 +10,6 @@
 body {
 	background-color: #e7e3d4;
 	font-family: 'Montserrat', sans-serif;
-	/*height: 100vh;*/
 	color: #3B8BE8;
 }
 
@@ -109,7 +108,8 @@ a:hover {
 	grid-template-areas: 
 	". title title title ."
 	". one two three ."
-	". four five six  .";
+	". four five six  ."
+	". . seven . .";
 	grid-gap: 10px;
 	background-color: #c4dbf6;
 	margin-bottom: 30px;
@@ -225,6 +225,19 @@ a:hover {
 	border-radius: 5px;
 }
 
+#seven {
+	grid-area: seven;
+	text-align: center;
+	background-color: #e7e3d4;
+	border-radius: 10px;
+}
+
+.kayak {
+	height: 20vh;
+	width: 20vw;
+	border-radius: 5px;
+}
+
 @media only screen and (max-width: 575.98px){
 .portfolio {
 	display: grid;
@@ -236,7 +249,8 @@ a:hover {
 	". three ."
 	". four ."
 	". five ."
-	". six  .";
+	". six  ."
+	". seven .";
 	grid-gap: 10px;
 	background-color: #c4dbf6;
 	margin-bottom: 30px;
@@ -340,6 +354,19 @@ a:hover {
 }
 
 .zoom {
+	height: 20vh;
+	width: 40vw;
+	border-radius: 10px;
+}
+
+#seven {
+	grid-area: seven;
+	text-align: center;
+	background-color: #e7e3d4;
+	border-radius: 5px;
+}
+
+.kayak {
 	height: 20vh;
 	width: 40vw;
 	border-radius: 10px;
@@ -359,7 +386,8 @@ a:hover {
 	". title title ."
 	". one two ."
 	". three four ."
-	". five six .";
+	". five six ."
+	". seven seven .";
 	grid-gap: 10px;
 	background-color: #c4dbf6;
 	margin-bottom: 30px;
@@ -464,6 +492,19 @@ a:hover {
 }
 
 .zoom {
+	height: 20vh;
+	width: 30vw;
+	border-radius: 10px;
+}
+
+#seven {
+	grid-area: seven;
+	text-align: center;
+	background-color: #e7e3d4;
+	border-radius: 5px;
+}
+
+.kayak {
 	height: 20vh;
 	width: 30vw;
 	border-radius: 10px;
